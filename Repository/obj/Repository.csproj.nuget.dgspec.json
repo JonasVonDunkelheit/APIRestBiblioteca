@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\JONAS VAN\\Desktop\\API Biblioteca\\Repository\\Repository.csproj": {}
+    "D:\\JONAS VAN\\Desktop\\API Rest Biblioteca - copia\\APIRestBiblioteca\\Repository\\Repository.csproj": {}
   },
   "projects": {
-    "D:\\JONAS VAN\\Desktop\\API Biblioteca\\Contracts\\Contracts.csproj": {
+    "D:\\JONAS VAN\\Desktop\\API Rest Biblioteca - copia\\APIRestBiblioteca\\Contracts\\Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\JONAS VAN\\Desktop\\API Biblioteca\\Contracts\\Contracts.csproj",
+        "projectUniqueName": "D:\\JONAS VAN\\Desktop\\API Rest Biblioteca - copia\\APIRestBiblioteca\\Contracts\\Contracts.csproj",
         "projectName": "Contracts",
-        "projectPath": "D:\\JONAS VAN\\Desktop\\API Biblioteca\\Contracts\\Contracts.csproj",
+        "projectPath": "D:\\JONAS VAN\\Desktop\\API Rest Biblioteca - copia\\APIRestBiblioteca\\Contracts\\Contracts.csproj",
         "packagesPath": "C:\\Users\\JONAS VAN\\.nuget\\packages\\",
-        "outputPath": "D:\\JONAS VAN\\Desktop\\API Biblioteca\\Contracts\\obj\\",
+        "outputPath": "D:\\JONAS VAN\\Desktop\\API Rest Biblioteca - copia\\APIRestBiblioteca\\Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\JONAS VAN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\JONAS VAN\\Desktop\\API Biblioteca\\Entities\\Entities.csproj": {
-                "projectPath": "D:\\JONAS VAN\\Desktop\\API Biblioteca\\Entities\\Entities.csproj"
+              "D:\\JONAS VAN\\Desktop\\API Rest Biblioteca - copia\\APIRestBiblioteca\\Entities\\Entities.csproj": {
+                "projectPath": "D:\\JONAS VAN\\Desktop\\API Rest Biblioteca - copia\\APIRestBiblioteca\\Entities\\Entities.csproj"
               }
             }
           }
@@ -76,14 +76,14 @@
         }
       }
     },
-    "D:\\JONAS VAN\\Desktop\\API Biblioteca\\Entities\\Entities.csproj": {
+    "D:\\JONAS VAN\\Desktop\\API Rest Biblioteca - copia\\APIRestBiblioteca\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\JONAS VAN\\Desktop\\API Biblioteca\\Entities\\Entities.csproj",
+        "projectUniqueName": "D:\\JONAS VAN\\Desktop\\API Rest Biblioteca - copia\\APIRestBiblioteca\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "D:\\JONAS VAN\\Desktop\\API Biblioteca\\Entities\\Entities.csproj",
+        "projectPath": "D:\\JONAS VAN\\Desktop\\API Rest Biblioteca - copia\\APIRestBiblioteca\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\JONAS VAN\\.nuget\\packages\\",
-        "outputPath": "D:\\JONAS VAN\\Desktop\\API Biblioteca\\Entities\\obj\\",
+        "outputPath": "D:\\JONAS VAN\\Desktop\\API Rest Biblioteca - copia\\APIRestBiblioteca\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\JONAS VAN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -144,14 +144,14 @@
         }
       }
     },
-    "D:\\JONAS VAN\\Desktop\\API Biblioteca\\Repository\\Repository.csproj": {
+    "D:\\JONAS VAN\\Desktop\\API Rest Biblioteca - copia\\APIRestBiblioteca\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\JONAS VAN\\Desktop\\API Biblioteca\\Repository\\Repository.csproj",
+        "projectUniqueName": "D:\\JONAS VAN\\Desktop\\API Rest Biblioteca - copia\\APIRestBiblioteca\\Repository\\Repository.csproj",
         "projectName": "Repository",
-        "projectPath": "D:\\JONAS VAN\\Desktop\\API Biblioteca\\Repository\\Repository.csproj",
+        "projectPath": "D:\\JONAS VAN\\Desktop\\API Rest Biblioteca - copia\\APIRestBiblioteca\\Repository\\Repository.csproj",
         "packagesPath": "C:\\Users\\JONAS VAN\\.nuget\\packages\\",
-        "outputPath": "D:\\JONAS VAN\\Desktop\\API Biblioteca\\Repository\\obj\\",
+        "outputPath": "D:\\JONAS VAN\\Desktop\\API Rest Biblioteca - copia\\APIRestBiblioteca\\Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\JONAS VAN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -168,11 +168,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\JONAS VAN\\Desktop\\API Biblioteca\\Contracts\\Contracts.csproj": {
-                "projectPath": "D:\\JONAS VAN\\Desktop\\API Biblioteca\\Contracts\\Contracts.csproj"
+              "D:\\JONAS VAN\\Desktop\\API Rest Biblioteca - copia\\APIRestBiblioteca\\Contracts\\Contracts.csproj": {
+                "projectPath": "D:\\JONAS VAN\\Desktop\\API Rest Biblioteca - copia\\APIRestBiblioteca\\Contracts\\Contracts.csproj"
               },
-              "D:\\JONAS VAN\\Desktop\\API Biblioteca\\Entities\\Entities.csproj": {
-                "projectPath": "D:\\JONAS VAN\\Desktop\\API Biblioteca\\Entities\\Entities.csproj"
+              "D:\\JONAS VAN\\Desktop\\API Rest Biblioteca - copia\\APIRestBiblioteca\\Entities\\Entities.csproj": {
+                "projectPath": "D:\\JONAS VAN\\Desktop\\API Rest Biblioteca - copia\\APIRestBiblioteca\\Entities\\Entities.csproj"
               }
             }
           }

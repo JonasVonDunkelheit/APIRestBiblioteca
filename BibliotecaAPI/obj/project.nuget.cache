@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fS6iCYVRXTDUbq/aD7yc7jDpdpmu3HiE52YVRsSUy/PA2RNJRt8Q+meoptlBbnF3FXycMq1zHE66iFaEBbaq0w==",
+  "dgSpecHash": "88UvWH4Qb1biQvEnzzLvlbYYq5PGRdYHZ6aEUOpmIlaUz0rHCGbNzaLNKOPzfx+ygHxDYAiTA4EZgZbFIv1xfg==",
   "success": true,
-  "projectFilePath": "D:\\JONAS VAN\\Desktop\\API Biblioteca\\BibliotecaAPI\\BibliotecaAPI.csproj",
+  "projectFilePath": "D:\\JONAS VAN\\Desktop\\API Rest Biblioteca - copia\\APIRestBiblioteca\\BibliotecaAPI\\BibliotecaAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\JONAS VAN\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\JONAS VAN\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2seve2oRiI9pINGVUrmlPRktIGi6S9KSwPYwIyt6Mj931TIO1D+VOFHUZ4aLI84wqojuDmgswuQJ+8LJpedbqg==",
+  "dgSpecHash": "vgny9tW9yU1jdmKvjoWBPY+FcP+fJ3DrIXB/drXQbmrA1tU5IgkRZZJumSa5EnNULOx7w6cZSm9hJ36B6lSkQg==",
   "success": true,
-  "projectFilePath": "D:\\JONAS VAN\\Desktop\\API Biblioteca\\LoggerService\\LoggerService.csproj",
+  "projectFilePath": "D:\\JONAS VAN\\Desktop\\API Rest Biblioteca - copia\\APIRestBiblioteca\\LoggerService\\LoggerService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\JONAS VAN\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\JONAS VAN\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

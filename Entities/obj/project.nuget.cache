@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sD5oUUf7Ox3yku+pAAoxWfI6SwWBXIdfvPeXCro7blHBczTDPLE5Z+ZNHNoE1+3pXbvAviDbka/hWwg+rZrLKg==",
+  "dgSpecHash": "44jV7D93lyKPdGjgC0MQZf0T/6+vMhcNG9AS4mC/EoX1+kPENbjnL2wdClnKMytTeBOwUoFN/kvfH2iE+et76A==",
   "success": true,
-  "projectFilePath": "D:\\JONAS VAN\\Desktop\\API Biblioteca\\Entities\\Entities.csproj",
+  "projectFilePath": "D:\\JONAS VAN\\Desktop\\API Rest Biblioteca - copia\\APIRestBiblioteca\\Entities\\Entities.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\JONAS VAN\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\JONAS VAN\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

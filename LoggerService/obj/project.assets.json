@@ -5833,11 +5833,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\JONAS VAN\\Desktop\\API Biblioteca\\LoggerService\\LoggerService.csproj",
+      "projectUniqueName": "D:\\JONAS VAN\\Desktop\\API Rest Biblioteca - copia\\APIRestBiblioteca\\LoggerService\\LoggerService.csproj",
       "projectName": "LoggerService",
-      "projectPath": "D:\\JONAS VAN\\Desktop\\API Biblioteca\\LoggerService\\LoggerService.csproj",
+      "projectPath": "D:\\JONAS VAN\\Desktop\\API Rest Biblioteca - copia\\APIRestBiblioteca\\LoggerService\\LoggerService.csproj",
       "packagesPath": "C:\\Users\\JONAS VAN\\.nuget\\packages\\",
-      "outputPath": "D:\\JONAS VAN\\Desktop\\API Biblioteca\\LoggerService\\obj\\",
+      "outputPath": "D:\\JONAS VAN\\Desktop\\API Rest Biblioteca - copia\\APIRestBiblioteca\\LoggerService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\JONAS VAN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5854,8 +5854,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\JONAS VAN\\Desktop\\API Biblioteca\\Contracts\\Contracts.csproj": {
-              "projectPath": "D:\\JONAS VAN\\Desktop\\API Biblioteca\\Contracts\\Contracts.csproj"
+            "D:\\JONAS VAN\\Desktop\\API Rest Biblioteca - copia\\APIRestBiblioteca\\Contracts\\Contracts.csproj": {
+              "projectPath": "D:\\JONAS VAN\\Desktop\\API Rest Biblioteca - copia\\APIRestBiblioteca\\Contracts\\Contracts.csproj"
             }
           }
         }

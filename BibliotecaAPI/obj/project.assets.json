@@ -6059,11 +6059,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\JONAS VAN\\Desktop\\API Biblioteca\\BibliotecaAPI\\BibliotecaAPI.csproj",
+      "projectUniqueName": "D:\\JONAS VAN\\Desktop\\API Rest Biblioteca - copia\\APIRestBiblioteca\\BibliotecaAPI\\BibliotecaAPI.csproj",
       "projectName": "BibliotecaAPI",
-      "projectPath": "D:\\JONAS VAN\\Desktop\\API Biblioteca\\BibliotecaAPI\\BibliotecaAPI.csproj",
+      "projectPath": "D:\\JONAS VAN\\Desktop\\API Rest Biblioteca - copia\\APIRestBiblioteca\\BibliotecaAPI\\BibliotecaAPI.csproj",
       "packagesPath": "C:\\Users\\JONAS VAN\\.nuget\\packages\\",
-      "outputPath": "D:\\JONAS VAN\\Desktop\\API Biblioteca\\BibliotecaAPI\\obj\\",
+      "outputPath": "D:\\JONAS VAN\\Desktop\\API Rest Biblioteca - copia\\APIRestBiblioteca\\BibliotecaAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\JONAS VAN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6080,17 +6080,17 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\JONAS VAN\\Desktop\\API Biblioteca\\Contracts\\Contracts.csproj": {
-              "projectPath": "D:\\JONAS VAN\\Desktop\\API Biblioteca\\Contracts\\Contracts.csproj"
+            "D:\\JONAS VAN\\Desktop\\API Rest Biblioteca - copia\\APIRestBiblioteca\\Contracts\\Contracts.csproj": {
+              "projectPath": "D:\\JONAS VAN\\Desktop\\API Rest Biblioteca - copia\\APIRestBiblioteca\\Contracts\\Contracts.csproj"
             },
-            "D:\\JONAS VAN\\Desktop\\API Biblioteca\\Entities\\Entities.csproj": {
-              "projectPath": "D:\\JONAS VAN\\Desktop\\API Biblioteca\\Entities\\Entities.csproj"
+            "D:\\JONAS VAN\\Desktop\\API Rest Biblioteca - copia\\APIRestBiblioteca\\Entities\\Entities.csproj": {
+              "projectPath": "D:\\JONAS VAN\\Desktop\\API Rest Biblioteca - copia\\APIRestBiblioteca\\Entities\\Entities.csproj"
             },
-            "D:\\JONAS VAN\\Desktop\\API Biblioteca\\LoggerService\\LoggerService.csproj": {
-              "projectPath": "D:\\JONAS VAN\\Desktop\\API Biblioteca\\LoggerService\\LoggerService.csproj"
+            "D:\\JONAS VAN\\Desktop\\API Rest Biblioteca - copia\\APIRestBiblioteca\\LoggerService\\LoggerService.csproj": {
+              "projectPath": "D:\\JONAS VAN\\Desktop\\API Rest Biblioteca - copia\\APIRestBiblioteca\\LoggerService\\LoggerService.csproj"
             },
-            "D:\\JONAS VAN\\Desktop\\API Biblioteca\\Repository\\Repository.csproj": {
-              "projectPath": "D:\\JONAS VAN\\Desktop\\API Biblioteca\\Repository\\Repository.csproj"
+            "D:\\JONAS VAN\\Desktop\\API Rest Biblioteca - copia\\APIRestBiblioteca\\Repository\\Repository.csproj": {
+              "projectPath": "D:\\JONAS VAN\\Desktop\\API Rest Biblioteca - copia\\APIRestBiblioteca\\Repository\\Repository.csproj"
             }
           }
         }

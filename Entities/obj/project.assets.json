@@ -5708,11 +5708,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\JONAS VAN\\Desktop\\API Biblioteca\\Entities\\Entities.csproj",
+      "projectUniqueName": "D:\\JONAS VAN\\Desktop\\API Rest Biblioteca - copia\\APIRestBiblioteca\\Entities\\Entities.csproj",
       "projectName": "Entities",
-      "projectPath": "D:\\JONAS VAN\\Desktop\\API Biblioteca\\Entities\\Entities.csproj",
+      "projectPath": "D:\\JONAS VAN\\Desktop\\API Rest Biblioteca - copia\\APIRestBiblioteca\\Entities\\Entities.csproj",
       "packagesPath": "C:\\Users\\JONAS VAN\\.nuget\\packages\\",
-      "outputPath": "D:\\JONAS VAN\\Desktop\\API Biblioteca\\Entities\\obj\\",
+      "outputPath": "D:\\JONAS VAN\\Desktop\\API Rest Biblioteca - copia\\APIRestBiblioteca\\Entities\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\JONAS VAN\\AppData\\Roaming\\NuGet\\NuGet.Config",

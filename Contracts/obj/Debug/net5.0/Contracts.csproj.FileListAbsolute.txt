@@ -1,0 +1,12 @@
+D:\JONAS VAN\Desktop\API Biblioteca\Contracts\bin\Debug\net5.0\Contracts.deps.json
+D:\JONAS VAN\Desktop\API Biblioteca\Contracts\bin\Debug\net5.0\Contracts.dll
+D:\JONAS VAN\Desktop\API Biblioteca\Contracts\bin\Debug\net5.0\ref\Contracts.dll
+D:\JONAS VAN\Desktop\API Biblioteca\Contracts\bin\Debug\net5.0\Contracts.pdb
+D:\JONAS VAN\Desktop\API Biblioteca\Contracts\obj\Debug\net5.0\Contracts.csproj.AssemblyReference.cache
+D:\JONAS VAN\Desktop\API Biblioteca\Contracts\obj\Debug\net5.0\Contracts.GeneratedMSBuildEditorConfig.editorconfig
+D:\JONAS VAN\Desktop\API Biblioteca\Contracts\obj\Debug\net5.0\Contracts.AssemblyInfoInputs.cache
+D:\JONAS VAN\Desktop\API Biblioteca\Contracts\obj\Debug\net5.0\Contracts.AssemblyInfo.cs
+D:\JONAS VAN\Desktop\API Biblioteca\Contracts\obj\Debug\net5.0\Contracts.csproj.CoreCompileInputs.cache
+D:\JONAS VAN\Desktop\API Biblioteca\Contracts\obj\Debug\net5.0\Contracts.dll
+D:\JONAS VAN\Desktop\API Biblioteca\Contracts\obj\Debug\net5.0\ref\Contracts.dll
+D:\JONAS VAN\Desktop\API Biblioteca\Contracts\obj\Debug\net5.0\Contracts.pdb

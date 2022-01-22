@@ -23,7 +23,7 @@ namespace BibliotecaAPI.Controllers
             _repository = repository;
             _mapper = mapper;
         }
-        [HttpGet("{id}")]
+        [HttpGet("{id}", Name = "EstanteById")]
         public IActionResult GetEstanteById(Guid id)
         {
             try

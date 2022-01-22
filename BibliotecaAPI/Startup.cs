@@ -38,6 +38,7 @@ namespace BibliotecaAPI
 
             services.ConfigureLoggerService();
             services.AddAutoMapper(typeof(Startup));
+            services.AddControllersWithViews();
             services.AddDbContext<RepositoryContext>(opts => opts.UseSqlServer(Configuration.GetConnectionString("sqlConnection")));
             services.ConfigureRepositoryWrapper();
             services.AddControllers();

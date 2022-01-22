@@ -13,5 +13,10 @@ namespace Entities.DataTransferObjects
         public string Apellidos { get; set; }        
         public string Nacionalidad { get; set; }        
         public Guid IdLibro { get; set; }
+
+        public string GetFullName()
+        {
+            return $"{this.Nombre} {this.Apellidos}";
+        }
     }
 }

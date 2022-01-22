@@ -11,7 +11,8 @@ namespace Entities.Models
     [Table("Revista")]
     public class Revista
     {        
-        public Guid IdRevista { get; set; }
+        [Column("IdRevista")]
+        public Guid Id { get; set; }
 
         [Required(ErrorMessage = "Este campo es requerido")]
         public int Numero { get; set; }

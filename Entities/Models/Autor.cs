@@ -11,7 +11,8 @@ namespace Entities.Models
     [Table ("Autor")]
     public class Autor
     {
-        public Guid IdAutor { get; set; }
+        [Column("IdAutor")]
+        public Guid Id { get; set; }
 
         [Required(ErrorMessage = "Este campo es requerido")]
         public string Nombre { get; set; }

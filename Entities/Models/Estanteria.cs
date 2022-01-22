@@ -11,7 +11,8 @@ namespace Entities.Models
     [Table ("Estanteria")]
     public class Estanteria
     {
-        public Guid IdEstanteria { get; set; }
+        [Column("IdEstanteria")]
+        public Guid Id { get; set; }
 
         [Required(ErrorMessage = "Este campo es requerido")]
         public string Codigo { get; set; }

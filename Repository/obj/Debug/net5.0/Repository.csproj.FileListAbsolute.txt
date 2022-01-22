@@ -1,0 +1,17 @@
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\Repository\bin\Debug\net5.0\Repository.deps.json
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\Repository\bin\Debug\net5.0\Repository.dll
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\Repository\bin\Debug\net5.0\ref\Repository.dll
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\Repository\bin\Debug\net5.0\Repository.pdb
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\Repository\bin\Debug\net5.0\Contracts.dll
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\Repository\bin\Debug\net5.0\Entities.dll
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\Repository\bin\Debug\net5.0\Contracts.pdb
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\Repository\bin\Debug\net5.0\Entities.pdb
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\Repository\obj\Debug\net5.0\Repository.csproj.AssemblyReference.cache
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\Repository\obj\Debug\net5.0\Repository.GeneratedMSBuildEditorConfig.editorconfig
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\Repository\obj\Debug\net5.0\Repository.AssemblyInfoInputs.cache
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\Repository\obj\Debug\net5.0\Repository.AssemblyInfo.cs
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\Repository\obj\Debug\net5.0\Repository.csproj.CoreCompileInputs.cache
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\Repository\obj\Debug\net5.0\Repository.csproj.CopyComplete
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\Repository\obj\Debug\net5.0\Repository.dll
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\Repository\obj\Debug\net5.0\ref\Repository.dll
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\Repository\obj\Debug\net5.0\Repository.pdb

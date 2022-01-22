@@ -1,0 +1,12 @@
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\Entities\bin\Debug\net5.0\Entities.deps.json
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\Entities\bin\Debug\net5.0\Entities.dll
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\Entities\bin\Debug\net5.0\ref\Entities.dll
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\Entities\bin\Debug\net5.0\Entities.pdb
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\Entities\obj\Debug\net5.0\Entities.csproj.AssemblyReference.cache
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\Entities\obj\Debug\net5.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\Entities\obj\Debug\net5.0\Entities.AssemblyInfoInputs.cache
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\Entities\obj\Debug\net5.0\Entities.AssemblyInfo.cs
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\Entities\obj\Debug\net5.0\Entities.csproj.CoreCompileInputs.cache
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\Entities\obj\Debug\net5.0\Entities.dll
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\Entities\obj\Debug\net5.0\ref\Entities.dll
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\Entities\obj\Debug\net5.0\Entities.pdb

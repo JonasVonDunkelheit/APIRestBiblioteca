@@ -13,3 +13,20 @@ D:\JONAS VAN\Desktop\API Biblioteca\LoggerService\obj\Debug\net5.0\LoggerService
 D:\JONAS VAN\Desktop\API Biblioteca\LoggerService\obj\Debug\net5.0\LoggerService.dll
 D:\JONAS VAN\Desktop\API Biblioteca\LoggerService\obj\Debug\net5.0\ref\LoggerService.dll
 D:\JONAS VAN\Desktop\API Biblioteca\LoggerService\obj\Debug\net5.0\LoggerService.pdb
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\LoggerService\bin\Debug\net5.0\LoggerService.deps.json
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\LoggerService\bin\Debug\net5.0\LoggerService.dll
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\LoggerService\bin\Debug\net5.0\ref\LoggerService.dll
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\LoggerService\bin\Debug\net5.0\LoggerService.pdb
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\LoggerService\bin\Debug\net5.0\Contracts.dll
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\LoggerService\bin\Debug\net5.0\Entities.dll
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\LoggerService\bin\Debug\net5.0\Contracts.pdb
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\LoggerService\bin\Debug\net5.0\Entities.pdb
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\LoggerService\obj\Debug\net5.0\LoggerService.csproj.AssemblyReference.cache
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\LoggerService\obj\Debug\net5.0\LoggerService.GeneratedMSBuildEditorConfig.editorconfig
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\LoggerService\obj\Debug\net5.0\LoggerService.AssemblyInfoInputs.cache
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\LoggerService\obj\Debug\net5.0\LoggerService.AssemblyInfo.cs
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\LoggerService\obj\Debug\net5.0\LoggerService.csproj.CoreCompileInputs.cache
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\LoggerService\obj\Debug\net5.0\LoggerService.csproj.CopyComplete
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\LoggerService\obj\Debug\net5.0\LoggerService.dll
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\LoggerService\obj\Debug\net5.0\ref\LoggerService.dll
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\LoggerService\obj\Debug\net5.0\LoggerService.pdb

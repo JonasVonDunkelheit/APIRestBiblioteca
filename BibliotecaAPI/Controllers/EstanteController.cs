@@ -1,4 +1,6 @@
-﻿using Contracts;
+﻿using AutoMapper;
+using Contracts;
+using Entities.DataTransferObjects;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -14,10 +16,12 @@ namespace BibliotecaAPI.Controllers
     {
         private ILoggerManager _logger;
         private IRepositoryWrapper _repository;
-        public EstanteController(ILoggerManager logger, IRepositoryWrapper repository)
+        private IMapper _mapper;
+        public EstanteController(ILoggerManager logger, IRepositoryWrapper repository, IMapper mapper)
         {
             _logger = logger;
             _repository = repository;
+            _mapper = mapper;
         }
         [HttpGet]
         public IActionResult GetAllEstantes()
@@ -27,6 +31,9 @@ namespace BibliotecaAPI.Controllers
                 var estantes = _repository.Estante.GetAllEstantes();
                 _logger.LogInfo($"Returned all owners from database.");
                 return Ok(estantes);
+
+                var estantesResult = _mapper.Map<IEnumerable<EstanteDto>>(estantes);
+                return Ok(estantesResult);
             }
             catch (Exception ex)
             {

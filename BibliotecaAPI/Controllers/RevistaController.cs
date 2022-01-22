@@ -1,4 +1,6 @@
-﻿using Contracts;
+﻿using AutoMapper;
+using Contracts;
+using Entities.DataTransferObjects;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -14,10 +16,12 @@ namespace BibliotecaAPI.Controllers
     {
         private ILoggerManager _logger;
         private IRepositoryWrapper _repository;
-        public RevistaController(ILoggerManager logger, IRepositoryWrapper repository)
+        private IMapper _mapper;
+        public RevistaController(ILoggerManager logger, IRepositoryWrapper repository, IMapper mapper)
         {
             _logger = logger;
             _repository = repository;
+            _mapper = mapper;
         }
         [HttpGet]
         public IActionResult GetAllOwners()
@@ -27,6 +31,9 @@ namespace BibliotecaAPI.Controllers
                 var revistas = _repository.Revista.GetAllRevistas();
                 _logger.LogInfo($"Returned all owners from database.");
                 return Ok(revistas);
+
+                var revistasResult = _mapper.Map<IEnumerable<RevistaDto>>(revistas);
+                return Ok(revistasResult);
             }
             catch (Exception ex)
             {

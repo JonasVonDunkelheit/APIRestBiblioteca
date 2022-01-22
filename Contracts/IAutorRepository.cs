@@ -10,5 +10,6 @@ namespace Contracts
     public interface IAutorRepository : IRepositoryBase<Autor>
     {
         IEnumerable<Autor> GetAllAutors();
+        Autor GetAutorById(Guid IdAutor);
     }
 }

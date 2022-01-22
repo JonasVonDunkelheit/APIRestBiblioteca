@@ -10,5 +10,6 @@ namespace Contracts
     public interface IEstanteRepository : IRepositoryBase<Estante>
     {
         IEnumerable<Estante> GetAllEstantes();
+        Estante GetEstanteById(Guid IdEstante);
     }
 }

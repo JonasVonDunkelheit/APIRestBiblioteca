@@ -21,5 +21,10 @@ namespace Repository
                 .OrderBy(es => es.Codigo)
                 .ToList();
         }
+
+        public Estanteria GetEstanteriaById(Guid IdEstanteria)
+        {
+            return FindByCondition(estanteria => estanteria.Id.Equals(IdEstanteria)).FirstOrDefault();
+        }
     }
 }

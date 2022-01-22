@@ -10,5 +10,6 @@ namespace Contracts
     public interface IRevistaRepository :IRepositoryBase<Revista>
     {
         IEnumerable<Revista> GetAllRevistas();
+        Revista GetResvistaById(Guid IdRevista);
     }
 }

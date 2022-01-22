@@ -24,21 +24,29 @@ namespace BibliotecaAPI.Controllers
             _repository = repository;
             _mapper = mapper;
         }
-        [HttpGet]
-        public IActionResult GetAllOwners()
+        [HttpGet("{id}")]
+        public IActionResult GetEstanteriaById(Guid id)
         {
             try
             {
-                var estanterias = _repository.Estanteria.GetAllEstanterias();
-                _logger.LogInfo($"Returned all owners from database.");
-                return Ok(estanterias);
+                var estanterias = _repository.Estanteria.GetEstanteriaById(id);
 
-                var estanteriasResult = _mapper.Map<IEnumerable<EstanteriaDto>>(estanterias);
-                return Ok(estanteriasResult);
+                if(estanterias == null)
+                {
+                    _logger.LogInfo($"La estantería con el id: {id}, no se encuentra en la base de datos.");
+                    return NotFound();
+                }
+                else
+                {
+                    _logger.LogInfo($"La estantería con el id: {id}");
+
+                    var estanteriasResult = _mapper.Map<EstanteriaDto>(estanterias);
+                    return Ok(estanteriasResult);
+                }                
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Something went wrong inside GetAllOwners action: {ex.Message}");
+                _logger.LogError($"Algo salió mal con la acción GetEstanteriaById: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }

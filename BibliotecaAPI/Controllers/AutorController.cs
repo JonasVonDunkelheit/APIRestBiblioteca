@@ -23,21 +23,28 @@ namespace BibliotecaAPI.Controllers
             _repository = repository;
             _mapper = mapper;
         }
-        [HttpGet]
-        public IActionResult GetAllAutors()
+        [HttpGet("{id}")]
+        public IActionResult GetAutorbyId(Guid id)
         {
             try
             {
-                var autors = _repository.Autor.GetAllAutors();
-                _logger.LogInfo($"Returned all owners from database.");
-                return Ok(autors);
-     
-                var autorResult = _mapper.Map<IEnumerable<AutorDto>>(autors);
-                return Ok(autorResult);
+                var autors = _repository.Autor.GetAutorById(id);
+
+                if (autors == null)
+                {
+                    _logger.LogInfo($"El Autor con id: {id}, no se encuentra en la base de datos.");
+                    return NotFound();
+                }
+                else
+                {
+                    _logger.LogInfo($"Autor con el id: {id}");
+                    var autorResult = _mapper.Map<AutorDto>(autors);
+                    return Ok(autorResult);
+                }                                    
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Something went wrong inside GetAllOwners action: {ex.Message}");
+                _logger.LogError($"Algo salió mal con la acción GetAutorById: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }

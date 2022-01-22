@@ -21,5 +21,10 @@ namespace Repository
                 .OrderBy(au => au.Nombre)
                 .ToList();
         }
+
+        public Autor GetAutorById(Guid IdAutor)
+        {
+            return FindByCondition(autor => autor.Id.Equals(IdAutor)).FirstOrDefault();
+        }
     }
 }

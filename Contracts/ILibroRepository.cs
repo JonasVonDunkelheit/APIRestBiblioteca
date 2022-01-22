@@ -10,5 +10,6 @@ namespace Contracts
     public interface ILibroRepository : IRepositoryBase<Libro>
     {
         IEnumerable<Libro> GetAllLibros();
+        Libro GetLibroById(Guid IdLibro);
     }
 }

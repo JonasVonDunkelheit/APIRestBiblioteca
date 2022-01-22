@@ -21,5 +21,10 @@ namespace Repository
                 .OrderBy(re => re.Nombre)
                 .ToList();
         }
+
+        public Revista GetResvistaById(Guid IdRevista)
+        {
+            return FindByCondition(revista => revista.Id.Equals(IdRevista)).FirstOrDefault();
+        }
     }
 }

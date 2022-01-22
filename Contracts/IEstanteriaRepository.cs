@@ -10,5 +10,6 @@ namespace Contracts
     public interface IEstanteriaRepository : IRepositoryBase<Estanteria>
     {
         IEnumerable<Estanteria> GetAllEstanterias();
+        Estanteria GetEstanteriaById(Guid IdEstanteria);
     }
 }

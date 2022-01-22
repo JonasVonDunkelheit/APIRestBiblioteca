@@ -23,21 +23,29 @@ namespace BibliotecaAPI.Controllers
             _repository = repository;
             _mapper = mapper;
         }
-        [HttpGet]
-        public IActionResult GetAllOwners()
+        [HttpGet("{id}")]
+        public IActionResult GetRevistaById(Guid id)
         {
             try
             {
-                var revistas = _repository.Revista.GetAllRevistas();
-                _logger.LogInfo($"Returned all owners from database.");
-                return Ok(revistas);
+                var revistas = _repository.Revista.GetResvistaById(id);
 
-                var revistasResult = _mapper.Map<IEnumerable<RevistaDto>>(revistas);
-                return Ok(revistasResult);
+                if(revistas == null)
+                {
+                    _logger.LogInfo($"La revista con el id: {id}, no se encuentra en la base de datos.");
+                    return NotFound();
+                }
+                else
+                {
+                    _logger.LogInfo($"La revista con id: {id}");
+
+                    var revistasResult = _mapper.Map<RevistaDto>(revistas);
+                    return Ok(revistasResult);
+                }                
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Something went wrong inside GetAllOwners action: {ex.Message}");
+                _logger.LogError($"Algo salió mal con la acción GetRevistaById: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }

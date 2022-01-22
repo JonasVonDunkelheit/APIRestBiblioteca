@@ -21,5 +21,10 @@ namespace Repository
                 .OrderBy(li => li.Titulo)
                 .ToList();
         }
+
+        public Libro GetLibroById(Guid IdLibro)
+        {
+            return FindByCondition(libro => libro.Id.Equals(IdLibro)).FirstOrDefault();
+        }
     }
 }

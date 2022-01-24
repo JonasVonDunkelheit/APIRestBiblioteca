@@ -13,5 +13,6 @@ namespace Contracts
         Libro GetLibroById(Guid IdLibro);
         void CreateLibro(Libro libro);
         void UpdateLibro(Libro libro);
+        void DeleteLibro(Libro libro);
     }
 }

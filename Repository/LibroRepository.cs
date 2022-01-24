@@ -36,5 +36,10 @@ namespace Repository
         {
             Update(libro);
         }
+
+        public void DeleteLibro(Libro libro)
+        {
+            Delete(libro);
+        }
     }
 }

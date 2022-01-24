@@ -116,5 +116,29 @@ namespace BibliotecaAPI.Controllers
                 return StatusCode(500, "Internal server error");
             }
         }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeleteEstante(Guid id)
+        {
+            try
+            {
+                var estante = _repository.Estante.GetEstanteById(id);
+                if (estante == null)
+                {
+                    _logger.LogError($"El Estante con el id: {id}, No se encontró en la base de datos.");
+                    return NotFound();
+                }
+
+                _repository.Estante.DeleteEstante(estante);
+                _repository.Save();
+
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Algo salió mal con la acción DeleteEstante: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
     }
 }

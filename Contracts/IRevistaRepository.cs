@@ -13,5 +13,6 @@ namespace Contracts
         Revista GetRevistaById(Guid IdRevista);
         void CreateRevista(Revista revista);
         void UpdateRevista(Revista revista);
+        void DeleteRevista(Revista revista);
     }
 }

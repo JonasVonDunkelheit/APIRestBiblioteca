@@ -36,5 +36,10 @@ namespace Repository
         {
             Update(estanteria);
         }
+
+        public void DeleteEstanteria(Estanteria estanteria)
+        {
+            Delete(estanteria);
+        }
     }
 }

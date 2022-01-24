@@ -13,5 +13,6 @@ namespace Contracts
         Autor GetAutorById(Guid IdAutor);
         void CreateAutor(Autor autor);
         void UpdateAutor(Autor autor);
+        void DeleteAutor(Autor autor);
     }
 }

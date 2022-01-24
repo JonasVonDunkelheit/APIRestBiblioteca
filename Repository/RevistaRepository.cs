@@ -36,5 +36,10 @@ namespace Repository
         {
             Update(revista);
         }
+
+        public void DeleteRevista(Revista revista)
+        {
+            Delete(revista);
+        }
     }
 }

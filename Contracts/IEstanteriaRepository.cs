@@ -13,5 +13,6 @@ namespace Contracts
         Estanteria GetEstanteriaById(Guid IdEstanteria);
         void CreateEstanteria(Estanteria estanteria);
         void UpdateEstanteria(Estanteria estanteria);
+        void DeleteEstanteria(Estanteria estanteria);
     }
 }

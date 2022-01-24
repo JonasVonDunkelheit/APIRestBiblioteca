@@ -26,5 +26,10 @@ namespace Repository
         {
             return FindByCondition(estanteria => estanteria.Id.Equals(IdEstanteria)).FirstOrDefault();
         }
+
+        public void CreateEstanteria(Estanteria estanteria)
+        {
+            Create(estanteria);
+        }
     }
 }

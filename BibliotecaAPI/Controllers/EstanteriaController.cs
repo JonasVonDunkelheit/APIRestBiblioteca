@@ -50,5 +50,33 @@ namespace BibliotecaAPI.Controllers
                 return StatusCode(500, "Internal server error");
             }
         }
+
+        [HttpPost]
+        public IActionResult CreateEstanteria([FromBody]EstanteriaForCreationDto estanteria)
+        {
+            try
+            {
+                if (estanteria == null)
+                {
+                    _logger.LogError("El objeto Estanteria enviado desde el cliente es nulo.");
+                    return BadRequest("El objeto Estanteria es nulo.");
+                }
+                if (!ModelState.IsValid)
+                {
+                    _logger.LogError("El objeto Estanteria enviado desde el cliente es inválido.");
+                    return BadRequest("Modelo de objeto inválido");
+                }
+                var estanteriaEntity = _mapper.Map<Estanteria>(estanteria);
+                _repository.Estanteria.CreateEstanteria(estanteriaEntity);
+                _repository.Save();
+                var createdEstanteria = _mapper.Map<EstanteriaDto>(estanteriaEntity);
+                return CreatedAtRoute("EstanteriaById", new { id = createdEstanteria }, createdEstanteria);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Algo salió mal dentro de la acción CreateEstanteria: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
     }
 }

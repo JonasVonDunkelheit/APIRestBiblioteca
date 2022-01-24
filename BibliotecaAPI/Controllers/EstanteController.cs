@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Contracts;
 using Entities.DataTransferObjects;
+using Entities.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -46,6 +47,34 @@ namespace BibliotecaAPI.Controllers
             catch (Exception ex)
             {
                 _logger.LogError($"Algo salió mal con la acción GetEstanteById: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
+
+        [HttpPost]
+        public IActionResult CreateEstante([FromBody] EstanteForCreationDto estante)
+        {
+            try
+            {
+                if (estante == null)
+                {
+                    _logger.LogError("El objeto Estante enviado desde el cliente es nulo.");
+                    return BadRequest("El objeto Estante es nulo.");
+                }
+                if (!ModelState.IsValid)
+                {
+                    _logger.LogError("El objeto Estante enviado desde el cliente es inválido.");
+                    return BadRequest("Modelo de objeto inválido");
+                }
+                var estanteEntity = _mapper.Map<Estante>(estante);
+                _repository.Estante.CreateEstante(estanteEntity);
+                _repository.Save();
+                var createdEstante = _mapper.Map<AutorDto>(estanteEntity);
+                return CreatedAtRoute("EstanteById", new { id = createdEstante }, createdEstante);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Algo salió mal dentro de la acción CreateEstante: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }

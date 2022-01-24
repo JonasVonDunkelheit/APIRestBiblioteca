@@ -26,5 +26,10 @@ namespace Repository
         {
             return FindByCondition(estante => estante.Id.Equals(IdEstante)).FirstOrDefault();
         }
+        
+        public void CreateEstante(Estante estante)
+        {
+            Create(estante);
+        }
     }
 }

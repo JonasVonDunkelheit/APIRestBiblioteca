@@ -26,5 +26,10 @@ namespace Repository
         {
             return FindByCondition(revista => revista.Id.Equals(IdRevista)).FirstOrDefault();
         }
+
+        public void CreateRevista(Revista revista)
+        {
+            Create(revista);
+        }
     }
 }

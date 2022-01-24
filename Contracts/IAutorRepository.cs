@@ -11,5 +11,6 @@ namespace Contracts
     {
         IEnumerable<Autor> GetAllAutors();
         Autor GetAutorById(Guid IdAutor);
+        void CreateAutor(Autor autor);
     }
 }

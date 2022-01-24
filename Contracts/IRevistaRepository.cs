@@ -11,5 +11,6 @@ namespace Contracts
     {
         IEnumerable<Revista> GetAllRevistas();
         Revista GetResvistaById(Guid IdRevista);
+        void CreateRevista(Revista revista);
     }
 }

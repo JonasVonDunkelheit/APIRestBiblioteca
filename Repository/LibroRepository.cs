@@ -26,5 +26,10 @@ namespace Repository
         {
             return FindByCondition(libro => libro.Id.Equals(IdLibro)).FirstOrDefault();
         }
+
+        public void CreateLibro(Libro libro)
+        {
+            Create(libro);
+        }
     }
 }

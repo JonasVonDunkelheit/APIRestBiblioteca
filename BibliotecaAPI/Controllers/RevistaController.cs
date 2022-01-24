@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Contracts;
 using Entities.DataTransferObjects;
+using Entities.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -46,6 +47,34 @@ namespace BibliotecaAPI.Controllers
             catch (Exception ex)
             {
                 _logger.LogError($"Algo salió mal con la acción GetRevistaById: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
+
+        [HttpPost]
+        public IActionResult CreateRevista([FromBody]RevistaForCreationDto revista)
+        {
+            try
+            {
+                if (revista == null)
+                {
+                    _logger.LogError("El objeto Revista enviado desde el cliente es nulo.");
+                    return BadRequest("El objeto Revista es nulo.");
+                }
+                if (!ModelState.IsValid)
+                {
+                    _logger.LogError("El objeto Revista enviado desde el cliente es inválido.");
+                    return BadRequest("Modelo de objeto inválido");
+                }
+                var revistaEntity = _mapper.Map<Revista>(revista);
+                _repository.Revista.CreateRevista(revistaEntity);
+                _repository.Save();
+                var createdRevista = _mapper.Map<RevistaDto>(revistaEntity);
+                return CreatedAtRoute("RevistaById", new { id = createdRevista }, createdRevista);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Algo salió mal dentro de la acción CreateRevista: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }

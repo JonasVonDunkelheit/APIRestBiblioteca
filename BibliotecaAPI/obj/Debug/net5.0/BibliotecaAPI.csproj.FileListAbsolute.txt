@@ -103,3 +103,9 @@ D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\BibliotecaAPI
 D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\BibliotecaAPI\obj\Debug\net5.0\ref\BibliotecaAPI.dll
 D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\BibliotecaAPI\obj\Debug\net5.0\BibliotecaAPI.pdb
 D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\BibliotecaAPI\obj\Debug\net5.0\BibliotecaAPI.genruntimeconfig.cache
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\BibliotecaAPI\bin\Debug\net5.0\AutoMapper.dll
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\BibliotecaAPI\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\BibliotecaAPI\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\BibliotecaAPI\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\BibliotecaAPI\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+D:\JONAS VAN\Desktop\API Rest Biblioteca - copia\APIRestBiblioteca\BibliotecaAPI\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll

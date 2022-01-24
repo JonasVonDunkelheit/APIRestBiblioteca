@@ -52,7 +52,7 @@ namespace BibliotecaAPI.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateEstante([FromBody] EstanteForCreationDto estante)
+        public IActionResult CreateEstante([FromBody]EstanteForCreationDto estante)
         {
             try
             {
@@ -69,12 +69,50 @@ namespace BibliotecaAPI.Controllers
                 var estanteEntity = _mapper.Map<Estante>(estante);
                 _repository.Estante.CreateEstante(estanteEntity);
                 _repository.Save();
-                var createdEstante = _mapper.Map<AutorDto>(estanteEntity);
+                var createdEstante = _mapper.Map<EstanteDto>(estanteEntity);
                 return CreatedAtRoute("EstanteById", new { id = createdEstante }, createdEstante);
             }
             catch (Exception ex)
             {
                 _logger.LogError($"Algo salió mal dentro de la acción CreateEstante: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult UpdateEstante(Guid id, [FromBody] EstanteForUpdateDto estante)
+        {
+            try
+            {
+                if (estante == null)
+                {
+                    _logger.LogError("El objeto Estante enviado desde el cliente es nulo.");
+                    return BadRequest("El objeto Estante es nulo");
+                }
+
+                if (!ModelState.IsValid)
+                {
+                    _logger.LogError("El objeto Estante enviado desde el cliente es inválido.");
+                    return BadRequest("Modelo de objeto inválido");
+                }
+
+                var estanteEntity = _repository.Estante.GetEstanteById(id);
+                if (estanteEntity == null)
+                {
+                    _logger.LogError($"El Estante con id: {id}, no se encontró en la base de datos.");
+                    return NotFound();
+                }
+
+                _mapper.Map(estante, estanteEntity);
+
+                _repository.Estante.UpdateEstante(estanteEntity);
+                _repository.Save();
+
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"SAlgo salío mal dentro de la acción UpdateEstante: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }

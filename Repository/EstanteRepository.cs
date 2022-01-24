@@ -31,5 +31,10 @@ namespace Repository
         {
             Create(estante);
         }
+
+        public void UpdateEstante(Estante estante)
+        {
+            Update(estante);
+        }
     }
 }

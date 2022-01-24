@@ -78,5 +78,43 @@ namespace BibliotecaAPI.Controllers
                 return StatusCode(500, "Internal server error");
             }
         }
+
+        [HttpPut("{id}")]
+        public IActionResult UpdateEstanteria(Guid id, [FromBody] EstanteriaForUpdateDto estanteria)
+        {
+            try
+            {
+                if (estanteria == null)
+                {
+                    _logger.LogError("El objeto Estanteria enviado desde el cliente es nulo.");
+                    return BadRequest("El objeto Estanteria es nulo");
+                }
+
+                if (!ModelState.IsValid)
+                {
+                    _logger.LogError("El objeto Estanteria enviado desde el cliente es inválido.");
+                    return BadRequest("Modelo de objeto inválido");
+                }
+
+                var estanteriaEntity = _repository.Estanteria.GetEstanteriaById(id);
+                if (estanteriaEntity == null)
+                {
+                    _logger.LogError($"La Estanteria con id: {id}, no se encontró en la base de datos.");
+                    return NotFound();
+                }
+
+                _mapper.Map(estanteria, estanteriaEntity);
+
+                _repository.Estanteria.UpdateEstanteria(estanteriaEntity);
+                _repository.Save();
+
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"SAlgo salío mal dentro de la acción UpdateEstanteria: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
     }
 }

@@ -17,11 +17,18 @@ namespace BibliotecaAPI
             CreateMap<Estanteria, EstanteriaDto>();
             CreateMap<Libro, LibroDto>();
             CreateMap<Revista, RevistaDto>();
+
             CreateMap<AutorForCreationDto, Autor>();
             CreateMap<EstanteForCreationDto, Estante>();
             CreateMap<EstanteriaForCreationDto, Estanteria>();
             CreateMap<LibroForCreationDto, Libro>();
             CreateMap<RevistaForCreationDto, Revista>();
+
+            CreateMap<AutorForUpdateDto, Autor>();            
+            CreateMap<EstanteForUpdateDto, Estante>();
+            CreateMap<EstanteriaForUpdateDto, Estanteria>();
+            CreateMap<LibroForUpdateDto, Libro>();
+            CreateMap<RevistaForUpdateDto, Revista>();
         }
     }
 }

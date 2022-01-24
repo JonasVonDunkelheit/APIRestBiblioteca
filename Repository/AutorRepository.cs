@@ -31,5 +31,10 @@ namespace Repository
         {
             Create(autor);
         }
+
+        public void UpdateAutor(Autor autor)
+        {
+            Update(autor);
+        }
     }
 }

@@ -12,5 +12,6 @@ namespace Contracts
         IEnumerable<Libro> GetAllLibros();
         Libro GetLibroById(Guid IdLibro);
         void CreateLibro(Libro libro);
+        void UpdateLibro(Libro libro);
     }
 }

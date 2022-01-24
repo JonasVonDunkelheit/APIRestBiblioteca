@@ -31,5 +31,10 @@ namespace Repository
         {
             Create(libro);
         }
+
+        public void UpdateLibro(Libro libro)
+        {
+            Update(libro);
+        }
     }
 }

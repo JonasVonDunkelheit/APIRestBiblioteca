@@ -29,7 +29,7 @@ namespace BibliotecaAPI.Controllers
         {
             try
             {
-                var revistas = _repository.Revista.GetResvistaById(id);
+                var revistas = _repository.Revista.GetRevistaById(id);
 
                 if(revistas == null)
                 {
@@ -75,6 +75,44 @@ namespace BibliotecaAPI.Controllers
             catch (Exception ex)
             {
                 _logger.LogError($"Algo salió mal dentro de la acción CreateRevista: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult UpdateRevista(Guid id, [FromBody] RevistaForUpdateDto revista)
+        {
+            try
+            {
+                if (revista == null)
+                {
+                    _logger.LogError("El objeto Revista enviado desde el cliente es nulo.");
+                    return BadRequest("El objeto Revista es nulo");
+                }
+
+                if (!ModelState.IsValid)
+                {
+                    _logger.LogError("El objeto Revista enviado desde el cliente es inválido.");
+                    return BadRequest("Modelo de objeto inválido");
+                }
+
+                var revistaEntity = _repository.Revista.GetRevistaById(id);
+                if (revistaEntity == null)
+                {
+                    _logger.LogError($"La Revista con id: {id}, no se encontró en la base de datos.");
+                    return NotFound();
+                }
+
+                _mapper.Map(revista, revistaEntity);
+
+                _repository.Revista.UpdateRevista(revistaEntity);
+                _repository.Save();
+
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"SAlgo salío mal dentro de la acción UpdateRevista: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }

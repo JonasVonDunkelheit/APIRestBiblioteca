@@ -22,7 +22,7 @@ namespace Repository
                 .ToList();
         }
 
-        public Revista GetResvistaById(Guid IdRevista)
+        public Revista GetRevistaById(Guid IdRevista)
         {
             return FindByCondition(revista => revista.Id.Equals(IdRevista)).FirstOrDefault();
         }
@@ -30,6 +30,11 @@ namespace Repository
         public void CreateRevista(Revista revista)
         {
             Create(revista);
+        }
+
+        public void UpdateRevista(Revista revista)
+        {
+            Update(revista);
         }
     }
 }

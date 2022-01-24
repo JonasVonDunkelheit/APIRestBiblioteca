@@ -12,5 +12,6 @@ namespace Contracts
         IEnumerable<Estanteria> GetAllEstanterias();
         Estanteria GetEstanteriaById(Guid IdEstanteria);
         void CreateEstanteria(Estanteria estanteria);
+        void UpdateEstanteria(Estanteria estanteria);
     }
 }

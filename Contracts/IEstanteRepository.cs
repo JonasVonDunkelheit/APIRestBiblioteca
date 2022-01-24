@@ -12,5 +12,6 @@ namespace Contracts
         IEnumerable<Estante> GetAllEstantes();
         Estante GetEstanteById(Guid IdEstante);
         void CreateEstante(Estante estante);
+        void UpdateEstante(Estante estante);
     }
 }

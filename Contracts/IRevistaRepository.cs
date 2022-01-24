@@ -10,7 +10,8 @@ namespace Contracts
     public interface IRevistaRepository :IRepositoryBase<Revista>
     {
         IEnumerable<Revista> GetAllRevistas();
-        Revista GetResvistaById(Guid IdRevista);
+        Revista GetRevistaById(Guid IdRevista);
         void CreateRevista(Revista revista);
+        void UpdateRevista(Revista revista);
     }
 }

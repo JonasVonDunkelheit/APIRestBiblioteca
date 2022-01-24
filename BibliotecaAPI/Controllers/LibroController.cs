@@ -78,5 +78,43 @@ namespace BibliotecaAPI.Controllers
                 return StatusCode(500, "Internal server error");
             }
         }
+
+        [HttpPut("{id}")]
+        public IActionResult UpdateLibro(Guid id, [FromBody] LibroForUpdateDto libro)
+        {
+            try
+            {
+                if (libro == null)
+                {
+                    _logger.LogError("El objeto Libro enviado desde el cliente es nulo.");
+                    return BadRequest("El objeto Libro es nulo");
+                }
+
+                if (!ModelState.IsValid)
+                {
+                    _logger.LogError("El objeto Libro enviado desde el cliente es inválido.");
+                    return BadRequest("Modelo de objeto inválido");
+                }
+
+                var libroEntity = _repository.Libro.GetLibroById(id);
+                if (libroEntity == null)
+                {
+                    _logger.LogError($"El Libro con id: {id}, no se encontró en la base de datos.");
+                    return NotFound();
+                }
+
+                _mapper.Map(libro, libroEntity);
+
+                _repository.Libro.UpdateLibro(libroEntity);
+                _repository.Save();
+
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"SAlgo salío mal dentro de la acción UpdateLibro: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
     }
 }

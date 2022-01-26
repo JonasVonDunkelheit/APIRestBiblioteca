@@ -24,121 +24,187 @@ namespace BibliotecaAPI.Controllers
             _repository = repository;
             _mapper = mapper;
         }
+
+        [HttpGet]
+        public IActionResult GetRevista()
+        {
+            var revistas = _repository.Revista.GetAllRevistas();
+
+            var revistaDto = _mapper.Map<IEnumerable<RevistaDto>>(revistas);
+
+            return Ok(revistaDto);
+        }
+
         [HttpGet("{id}", Name = "RevistaById")]
         public IActionResult GetRevistaById(Guid id)
         {
-            try
+            var revistas = _repository.Revista.GetRevistaById(id);
+            if (revistas == null)
             {
-                var revistas = _repository.Revista.GetRevistaById(id);
-
-                if(revistas == null)
-                {
-                    _logger.LogInfo($"La revista con el id: {id}, no se encuentra en la base de datos.");
-                    return NotFound();
-                }
-                else
-                {
-                    _logger.LogInfo($"La revista con id: {id}");
-
-                    var revistasResult = _mapper.Map<RevistaDto>(revistas);
-                    return Ok(revistasResult);
-                }                
+                _logger.LogInfo($"La Revista con id: {id}, no se encuentra en la base de datos.");
+                return NotFound();
             }
-            catch (Exception ex)
-            {
-                _logger.LogError($"Algo salió mal con la acción GetRevistaById: {ex.Message}");
-                return StatusCode(500, "Internal server error");
-            }
+
+            var revistaResult = _mapper.Map<RevistaDto>(revistas);
+
+            return Ok(revistaResult);
+
+            //try
+            //{
+            //    var revistas = _repository.Revista.GetRevistaById(id);
+
+            //    if(revistas == null)
+            //    {
+            //        _logger.LogInfo($"La revista con el id: {id}, no se encuentra en la base de datos.");
+            //        return NotFound();
+            //    }
+            //    else
+            //    {
+            //        _logger.LogInfo($"La revista con id: {id}");
+
+            //        var revistasResult = _mapper.Map<RevistaDto>(revistas);
+            //        return Ok(revistasResult);
+            //    }                
+            //}
+            //catch (Exception ex)
+            //{
+            //    _logger.LogError($"Algo salió mal con la acción GetRevistaById: {ex.Message}");
+            //    return StatusCode(500, "Internal server error");
+            //}
         }
 
         [HttpPost]
         public IActionResult CreateRevista([FromBody]RevistaForCreationDto revista)
         {
-            try
+            if (revista == null)
             {
-                if (revista == null)
-                {
-                    _logger.LogError("El objeto Revista enviado desde el cliente es nulo.");
-                    return BadRequest("El objeto Revista es nulo.");
-                }
-                if (!ModelState.IsValid)
-                {
-                    _logger.LogError("El objeto Revista enviado desde el cliente es inválido.");
-                    return BadRequest("Modelo de objeto inválido");
-                }
-                var revistaEntity = _mapper.Map<Revista>(revista);
-                _repository.Revista.CreateRevista(revistaEntity);
-                _repository.Save();
-                var createdRevista = _mapper.Map<RevistaDto>(revistaEntity);
-                return CreatedAtRoute("RevistaById", new { id = createdRevista }, createdRevista);
+                _logger.LogError("El objeto Revista enviado desde el cliente es nulo.");
+                return BadRequest("El objeto Revista es nulo.");
             }
-            catch (Exception ex)
-            {
-                _logger.LogError($"Algo salió mal dentro de la acción CreateRevista: {ex.Message}");
-                return StatusCode(500, "Internal server error");
-            }
+
+            var revistaEntity = _mapper.Map<Revista>(revista);
+            _repository.Revista.CreateRevista(revistaEntity);
+            _repository.Save();
+
+            var createdRevista = _mapper.Map<RevistaDto>(revistaEntity);
+            return CreatedAtRoute("RevistaById", new { id = createdRevista }, createdRevista);
+
+            //try
+            //{
+            //    if (revista == null)
+            //    {
+            //        _logger.LogError("El objeto Revista enviado desde el cliente es nulo.");
+            //        return BadRequest("El objeto Revista es nulo.");
+            //    }
+            //    if (!ModelState.IsValid)
+            //    {
+            //        _logger.LogError("El objeto Revista enviado desde el cliente es inválido.");
+            //        return BadRequest("Modelo de objeto inválido");
+            //    }
+            //    var revistaEntity = _mapper.Map<Revista>(revista);
+            //    _repository.Revista.CreateRevista(revistaEntity);
+            //    _repository.Save();
+            //    var createdRevista = _mapper.Map<RevistaDto>(revistaEntity);
+            //    return CreatedAtRoute("RevistaById", new { id = createdRevista }, createdRevista);
+            //}
+            //catch (Exception ex)
+            //{
+            //    _logger.LogError($"Algo salió mal dentro de la acción CreateRevista: {ex.Message}");
+            //    return StatusCode(500, "Internal server error");
+            //}
         }
 
         [HttpPut("{id}")]
         public IActionResult UpdateRevista(Guid id, [FromBody] RevistaForUpdateDto revista)
         {
-            try
+            if (revista == null)
             {
-                if (revista == null)
-                {
-                    _logger.LogError("El objeto Revista enviado desde el cliente es nulo.");
-                    return BadRequest("El objeto Revista es nulo");
-                }
-
-                if (!ModelState.IsValid)
-                {
-                    _logger.LogError("El objeto Revista enviado desde el cliente es inválido.");
-                    return BadRequest("Modelo de objeto inválido");
-                }
-
-                var revistaEntity = _repository.Revista.GetRevistaById(id);
-                if (revistaEntity == null)
-                {
-                    _logger.LogError($"La Revista con id: {id}, no se encontró en la base de datos.");
-                    return NotFound();
-                }
-
-                _mapper.Map(revista, revistaEntity);
-
-                _repository.Revista.UpdateRevista(revistaEntity);
-                _repository.Save();
-
-                return NoContent();
+                _logger.LogError("El objeto Revvista enviado desde el cliente es nulo.");
+                return BadRequest("El objeto Revista es nulo");
             }
-            catch (Exception ex)
+
+            var revistaEntity = _repository.Revista.GetRevistaById(id);
+            if (revistaEntity == null)
             {
-                _logger.LogError($"SAlgo salío mal dentro de la acción UpdateRevista: {ex.Message}");
-                return StatusCode(500, "Internal server error");
+                _logger.LogError($"La revista con id: {id}, no se encontró en la base de datos.");
+                return NotFound();
             }
+
+            _mapper.Map(revista, revistaEntity);
+
+            _repository.Revista.UpdateRevista(revistaEntity);
+            _repository.Save();
+
+            return NoContent();
+
+            //try
+            //{
+            //    if (revista == null)
+            //    {
+            //        _logger.LogError("El objeto Revista enviado desde el cliente es nulo.");
+            //        return BadRequest("El objeto Revista es nulo");
+            //    }
+
+            //    if (!ModelState.IsValid)
+            //    {
+            //        _logger.LogError("El objeto Revista enviado desde el cliente es inválido.");
+            //        return BadRequest("Modelo de objeto inválido");
+            //    }
+
+            //    var revistaEntity = _repository.Revista.GetRevistaById(id);
+            //    if (revistaEntity == null)
+            //    {
+            //        _logger.LogError($"La Revista con id: {id}, no se encontró en la base de datos.");
+            //        return NotFound();
+            //    }
+
+            //    _mapper.Map(revista, revistaEntity);
+
+            //    _repository.Revista.UpdateRevista(revistaEntity);
+            //    _repository.Save();
+
+            //    return NoContent();
+            //}
+            //catch (Exception ex)
+            //{
+            //    _logger.LogError($"SAlgo salío mal dentro de la acción UpdateRevista: {ex.Message}");
+            //    return StatusCode(500, "Internal server error");
+            //}
         }
 
         [HttpDelete("{id}")]
         public IActionResult DeleteRevista(Guid id)
         {
-            try
+            var revista = _repository.Revista.GetRevistaById(id);
+            if (revista == null)
             {
-                var revista = _repository.Revista.GetRevistaById(id);
-                if (revista == null)
-                {
-                    _logger.LogError($"La Revista con el id: {id}, No se encontró en la base de datos.");
-                    return NotFound();
-                }
-
-                _repository.Revista.DeleteRevista(revista);
-                _repository.Save();
-
-                return NoContent();
+                _logger.LogError($"La Revista con el id: {id}, No se encontró en la base de datos.");
+                return NotFound();
             }
-            catch (Exception ex)
-            {
-                _logger.LogError($"Algo salió mal con la acción DeleteRevista: {ex.Message}");
-                return StatusCode(500, "Internal server error");
-            }
+
+            _repository.Revista.DeleteRevista(revista);
+            _repository.Save();
+            return NoContent();
+
+            //try
+            //{
+            //    var revista = _repository.Revista.GetRevistaById(id);
+            //    if (revista == null)
+            //    {
+            //        _logger.LogError($"La Revista con el id: {id}, No se encontró en la base de datos.");
+            //        return NotFound();
+            //    }
+
+            //    _repository.Revista.DeleteRevista(revista);
+            //    _repository.Save();
+
+            //    return NoContent();
+            //}
+            //catch (Exception ex)
+            //{
+            //    _logger.LogError($"Algo salió mal con la acción DeleteRevista: {ex.Message}");
+            //    return StatusCode(500, "Internal server error");
+            //}
         }
     }
 }

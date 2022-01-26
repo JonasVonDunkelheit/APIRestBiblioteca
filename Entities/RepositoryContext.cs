@@ -14,6 +14,14 @@ namespace Entities
             : base(options)
         {
         }
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.ApplyConfiguration(new autorConfiguration());
+        //    modelBuilder.ApplyConfiguration(new estanteConfiguration());
+        //    modelBuilder.ApplyConfiguration(new estanteriaConfiguration());
+        //    modelBuilder.ApplyConfiguration(new libroConfiguration());
+        //    modelBuilder.ApplyConfiguration(new revistaConfiguration());
+        //}
 
         public DbSet<Autor> Autors { get; set; }
         public DbSet<Estante> Estantes { get; set; }
